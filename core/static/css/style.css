@@ -6,3 +6,8 @@ a {
     text-decoration: none;
     color: white;
 }
+.conteudo {
+    display: grid;
+    flex-direction: column;
+    justify-items: center;
+}
