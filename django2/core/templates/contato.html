@@ -1,10 +1,20 @@
+{% load boostrap4 %}
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Contato</title>
+    {% boostrap_css %}
 </head>
 <body>
-    <h1>Contato</h1>
+    <div class="container">
+        <h1>Contato</h1>
+        {% boostrap_messages %}
+
+        <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off" ">
+            {% csrf_token %}
+        </form>
+    </div>
+{% boostrap_javascript jquery='full' %}
 </body>
 </html>
